@@ -1,0 +1,26 @@
+//UI settings
+@import './base/settings';
+// Components
+@import './components/addcoffe';
+@import './components/common/header';
+@import './components/common/signin/signin';
+@import './components/courses/courses';
+@import './components/courses/editcoffee/editCoffee';
+@import './components/homepage/homepage';
+@import './components/homepage/articles';
+@import './components/register/resgister';
+// Screens
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  

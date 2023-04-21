@@ -1,0 +1,106 @@
+.header-container {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    background-color: $primary;
+    color: $white;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    ul {
+        margin: 0%;
+        padding: 0%;
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        list-style-type: none;
+        font-size: 1.3em;
+
+        li {
+            margin: 5%;
+
+            a {
+                text-decoration: none;
+                color: $accent-variant;
+                transition: all 0.5s;
+
+                &:hover {
+                    font-size: 1.05em;
+                }
+            }
+        }
+    }
+
+    .search-container {
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        input {
+            border-color: $accent;
+            width: 15vw;
+            border: 0;
+            height: 4.5vh;
+            border-radius: 10px;
+            font-size: 1em;
+            text-align: center;
+            margin-right: 5px;
+            transition: all 0.3s;
+
+            &:hover {
+                border: $accent solid 2px;
+
+            }
+        }
+
+        button {
+            width: 7vw;
+            height: 4.5vh;
+            border: 0;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 500;
+            text-transform: uppercase;
+            background-color: $accent-variant;
+            color: $primary;
+            transition: all 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+
+        }
+    }
+    .img1 {
+        display: flex;
+        height: 10vh;
+        // width:8vw;
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+}
+
+
+@media handheld,
+only screen and (max-width: 767px) {
+    .header-container {
+        ul {
+            width: 30%;
+            font-size: 1.1em;
+        }
+
+        .search-container {
+            display: none;
+        }
+    }
+}

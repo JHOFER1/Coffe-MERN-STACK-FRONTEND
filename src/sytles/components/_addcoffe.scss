@@ -1,0 +1,140 @@
+// Logo
+
+.apadd {
+    
+    img {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        overflow: hidden;
+        background-color: $primary-text-color;
+    }
+    
+    button {
+        height: 4.5vh;
+        width: 7vw;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 500;
+        background-color: #fff;
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        // padding: 20px 0;
+        font-weight: 500;
+        color: $accent-variant;
+        // line-height: 1.2rem;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 1px;
+        margin-top: 5px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 5px;
+    
+        input {
+            margin-bottom: 20px;
+            border-color: $accent;
+            width: 30vw;
+            border: 0;
+            height: 4.5vh;
+            border-radius: 10px;
+            font-size: 1em;
+            text-align: center;
+            transition: all 0.3s;
+        }
+    }
+
+    .dropdown-menu-add {
+        position: absolute;
+        top: 12vh;
+        right: 10vw;
+        border-radius: $border-radius;
+        width: 80vw;
+    }
+
+    .dropdown-menu-add.active {
+        background-color: $primary-text-color;
+        opacity: 0.95;
+        // visibility: visible;
+        transform: translateY(0);
+        transition: $speed ease;
+        z-index: 2;
+        text-align: center;
+        padding-bottom: 4.5vh;
+
+        button {
+            margin-top: 2.5vh;
+            height: 4.5vh;
+            width: 20vw;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            background-color: $accent-variant;
+            transition: all 0.3s;
+    
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .dropdown-menu-add.inactive {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-30px);
+        transition: $speed ease;
+    }
+
+}
+
+@media handheld,
+only screen and (max-width: 767px) {
+    .apadd {
+        button{
+        // position: absolute;
+        // top: 20px;
+        // right: 20px;
+        height: 5vh;
+        width: 20vw;
+        font-size: 0.75em;
+        }
+        .dropdown-menu-add {
+            top: 11vh;
+            right: 10vw;
+        }
+        form {
+
+            input {
+                width: 50vw;
+            }
+        }
+        
+        .dropdown-menu-add.active {
+            button {
+                width: 40vw;
+            }
+        }
+    }
+}

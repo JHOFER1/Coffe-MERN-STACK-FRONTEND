@@ -1,0 +1,177 @@
+// Logo
+
+.Apsign {
+
+    img {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        overflow: hidden;
+        background-color: $primary-text-color;
+    }
+
+    button {
+        // position: absolute;
+        // top: 20px;
+        // right: 20px;
+        height: 4.5vh;
+        width: 7vw;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 500;
+        background-color: $accent-variant;
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        // padding: 20px 0;
+        font-weight: 500;
+        color: $accent-variant;
+        // line-height: 1.2rem;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 1px;
+        margin-top: 5px;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        input {
+            margin-bottom: 20px;
+            border-color: $accent;
+            width: 20vw;
+            border: 0;
+            height: 4.5vh;
+            border-radius: 10px;
+            font-size: 1em;
+            text-align: center;
+            transition: all 0.3s;
+
+        }
+    }
+
+    .dropdown-menu-sign {
+        position: absolute;
+        top: 10vh;
+        right: 20px;
+        border-radius: border-radius;
+        padding: 0px 20px;
+        width: 20vw;
+    }
+
+    /* Cuadrado Girado 45° */
+    .dropdown-menu-sign::before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        right: 20px;
+        height: 20px;
+        width: 20px;
+        background: $primary-text-color;
+        transform: rotate(45deg);
+    }
+
+    .dropdown-menu-sign.active {
+        background-color: $primary-text-color;
+        opacity: 0.95;
+        visibility: visible;
+        transform: translateY(0);
+        transition: var(--speed) ease;
+        z-index: 2;
+        text-align: center;
+        padding-bottom: 4.5vh;
+
+        a {
+            text-decoration: none;
+            color: $accent-variant;
+        }
+
+        button {
+            margin-top: 2.5vh;
+            height: 4.5vh;
+            width: 20vw;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            background-color: $accent-variant;
+            transition: all 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .dropdown-menu-sign.inactive {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: $speed ease;
+    }
+
+}
+
+@media handheld,
+only screen and (max-width: 767px) {
+    .Apsign {
+        button {
+            // position: absolute;
+            // top: 20px;
+            // right: 20px;
+            height: 5vh;
+            width: 20vw;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            font-size: 0.75em;
+            font-weight: 500;
+            background-color: $accent-variant;
+            transition: all 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .dropdown-menu-sign {
+            right: 2vw;
+            width: 70vw;
+        }
+
+        form {
+            input {
+                width: 50vw;
+                border: 0;
+                height: 4.5vh;
+                border-radius: 10px;
+                font-size: 1em;
+                text-align: center;
+                transition: all 0.3s;
+
+            }
+        }
+
+        .dropdown-menu-add.active {
+            button {
+                width: 40vw;
+            }
+        }
+    }
+}
